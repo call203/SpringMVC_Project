@@ -4,6 +4,11 @@ body {
 	padding-bottom: 30px;
 }
 
+div h6{
+	 font-weight: 700;
+}
+
+
 .board_title {
 	font-weight : 700;
 	font-size : 22pt;

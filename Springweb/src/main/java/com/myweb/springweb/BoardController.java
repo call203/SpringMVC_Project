@@ -15,12 +15,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.myweb.common.Pagination;
 import com.myweb.common.Search;
 import com.myweb.service.BaordService;
 import com.myweb.vo.BoardVO;
+import com.myweb.vo.CommantVO;
 
 /**
  * Handles requests for the application home page.
@@ -63,6 +65,9 @@ public class BoardController {
         return "board/index";
     }
 	
+	
+	
+	
 	/** 글쓰기  **/
 	@RequestMapping("board/boardForm") 
 	public String boardForm(@ModelAttribute("boardVO") BoardVO vo, Model model) {
@@ -86,6 +91,7 @@ public class BoardController {
 	public String getBoardContent(Model model, @RequestParam("bid") int bid)throws Exception{
 		
 		model.addAttribute("boardContent", service.getBoardContent(bid));
+		model.addAttribute("CommantVO",new CommantVO());
 		
 		return "board/boardContent";
 		
@@ -121,6 +127,7 @@ public class BoardController {
 		return "error/exception";
 	}
 
+	
 	
 	
 }

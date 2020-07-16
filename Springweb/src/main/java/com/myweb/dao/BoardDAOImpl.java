@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import com.myweb.common.Pagination;
 import com.myweb.common.Search;
 import com.myweb.vo.BoardVO;
+import com.myweb.vo.CommantVO;
 
 @Repository
 public class BoardDAOImpl implements BoardDAO{
@@ -21,6 +22,7 @@ public class BoardDAOImpl implements BoardDAO{
 	
 	
 	private static final String Namespace="com.myweb.mybatis.sql.test";
+	private static final String Namespace2="com.myweb.mybatis.sql.commantMapper";
 
 	@Override
 	public List<BoardVO> getBoardList(Search search) throws Exception {
@@ -63,6 +65,35 @@ public class BoardDAOImpl implements BoardDAO{
 	public int getBoardListCnt(Search search) throws Exception {
 		// TODO Auto-generated method stub
 		return sqlSession.selectOne(Namespace + ".getBoardListCnt",search);
+	}
+
+	/**
+	 * 댓글
+	 */
+	@Override
+	public List<CommantVO> getCommantList(int bid) throws Exception {
+		// TODO Auto-generated method stub
+		return sqlSession.selectList(Namespace2+".getCommantList",bid);
+	}
+
+	@Override
+	public void saveCommant(CommantVO commantVO) throws Exception {
+		// TODO Auto-generated method stub
+		sqlSession.insert(Namespace2+".saveCommant", commantVO);
+		
+	}
+
+	@Override
+	public void updateCommant(CommantVO CommantVO) throws Exception {
+		// TODO Auto-generated method stub
+		sqlSession.update(Namespace2+".updateCommant", CommantVO);
+		
+	}
+
+	@Override
+	public void delelteCommant(int rid) throws Exception {
+		// TODO Auto-generated method stub
+		sqlSession.update(Namespace2+".deleteCommant", rid);
 	}
 	
 

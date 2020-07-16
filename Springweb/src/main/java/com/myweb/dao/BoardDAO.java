@@ -22,5 +22,16 @@ public interface BoardDAO {
 	 public int updateViewCnt(int bid) throws Exception;
 	 
 	 public int getBoardListCnt(Search search) throws Exception;
+	 
+	 //댓글
+	 public List<CommantVO> getCommantList(int bid) throws Exception;
+	 
+	 public void saveCommant(CommantVO commantVO) throws Exception;
+	 
+	 public void updateCommant(CommantVO CommantVO) throws Exception;
+	 
+	 public void delelteCommant(int rid) throws Exception;
+	 
+	 
 
 }

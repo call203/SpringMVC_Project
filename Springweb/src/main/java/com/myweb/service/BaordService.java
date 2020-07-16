@@ -5,6 +5,7 @@ import java.util.Map;
 import com.myweb.common.Pagination;
 import com.myweb.common.Search;
 import com.myweb.vo.BoardVO;
+import com.myweb.vo.CommantVO;
 
  
 public interface BaordService {
@@ -20,5 +21,14 @@ public interface BaordService {
     public void deleteBoard(int bid) throws Exception;
     
     public int getBoardListCnt(Search search) throws Exception;
+    
+     //댓글
+  	 public List<CommantVO> getCommantList(int bid) throws Exception;
+  	 
+  	 public void saveCommant(CommantVO commantVO) throws Exception;
+  	 
+  	 public void updateCommant(CommantVO CommantVO) throws Exception;
+  	 
+  	 public void delelteCommant(int rid) throws Exception;
     
 }
