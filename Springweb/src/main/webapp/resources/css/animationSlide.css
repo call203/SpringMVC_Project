@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+*{
+	margin:0;
+	padding:0px;
+}
+
+ul,li{
+	list-style:none;
+}
+
+.slide{
+	height:300px;
+	overflow:hidden;
+	margin-left:130px;
+  	margin-right:130px;
+  	margin-top:30px;
+}
+
+.slide ul{width:calc(100% * 4);display:flex;animation:slide 13s infinite;} /* slide를 13초동안 진행하며 무한반복 함 */
+.slide li{width:calc(100% / 4);height:500px;}
+.slide li:nth-child(1){}
+.slide li:nth-child(2){background-image: url( ".././image/slide1.PNG" );background-size: 100% 300px;}
+.slide li:nth-child(3){background-image: url( ".././image/slide2.PNG" );background-size: 100% 300px;}
+
+   
+@keyframes slide {
+	
+      0% {margin-left:0;} /* 0 ~ 10  : 정지 */
+      10% {margin-left:0;} /* 10 ~ 25 : 변이 */
+      25% {margin-left:-100%;} /* 25 ~ 35 : 정지 */
+      35% {margin-left:-100%;} /* 35 ~ 50 : 변이 */
+      50% {margin-left:-200%;}
+      60% {margin-left:-200%;}
+      75% {margin-left:-300%;}
+      85% {margin-left:-300%;}
+      100% {margin-left:0;}
+      
+ }

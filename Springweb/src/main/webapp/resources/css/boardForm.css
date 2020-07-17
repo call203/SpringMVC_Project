@@ -27,3 +27,7 @@
 	font-size: 20px;
 	font-weight: 700;
 }
+
+.ck.ckeditor{
+	min-height:300px;
+}

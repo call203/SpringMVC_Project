@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <% request.setCharacterEncoding("UTF-8"); %>
+<%@include file =".././layout/header.jsp" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <!DOCTYPE html>
@@ -13,6 +14,9 @@
 		<link href="${pageContext.request.contextPath}/resources/css/boardForm.css?ver=1" rel="stylesheet" />
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<!---CKEditor-->
+		<script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>
+		
 
 	</head>
 	<script>
@@ -61,6 +65,7 @@
                 <div class="mb-3">
                    <label for="content">내용</label>
                    <form:textarea path="content" id="content" class="form-control" rows="5" placeholder="내용을 입력해 주세요" />
+                   <script src="${pageContext.request.contextPath}/resources/js/ckeditor.js"></script>
                 </div>
 
 				
@@ -72,10 +77,12 @@
 
 				
 			<div>
-				<button type="button" class="btn btn-danger" id="btnSave">저장</button>
-				<button type="button" class="btn btn-danger" id="btnList">목록</button>
+				<button type="button" class="btn btn-sm btn-outline-secondary" id="btnSave">저장</button>
+				<button type="button" class="btn btn-sm btn-outline-secondary" id="btnList">목록</button>
 			</div>
 		</div>
 	</article>
+	<%@include file =".././layout/footer.jsp" %>
 	</body>
+
 </html>

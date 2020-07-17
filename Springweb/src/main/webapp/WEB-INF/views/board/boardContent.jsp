@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@include file =".././layout/header.jsp" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -204,9 +206,9 @@
 			</div>		
 
 			<div style="margin-top : 20px">
-				<button type="button" class="btn btn-danger" onClick="btnUpdate(<c:out value="${boardContent.bid}"/>)">수정</button>
-				<button type="button" class="btn btn-danger" onClick="btnDelete(<c:out value="${boardContent.bid}"/>)">삭제</button>
-				<button type="button" class="btn btn-danger" id="btnList">목록</button>
+				<button type="button" class="btn btn-sm btn-outline-secondary" onClick="btnUpdate(<c:out value="${boardContent.bid}"/>)">수정</button>
+				<button type="button" class="btn btn-sm btn-outline-secondary" onClick="btnDelete(<c:out value="${boardContent.bid}"/>)">삭제</button>
+				<button type="button" class="btn btn-sm btn-outline-secondary" id="btnList">목록</button>
 			</div>
 			
 			<!-- Reply Form {s} -->
@@ -222,7 +224,7 @@
 					
 					<div class="col-sm-2">
 						<form:input path="reg_id" class="form-control" id="reg_id" placeholder="댓글 작성자"></form:input>
-						<button type="button" class="btn btn-sm btn-primary" id="btnCommantSave" style="width: 100%; margin-top: 10px"> 저 장 </button>
+						<button type="button" class="btn btn-sm btn-outline-secondary" id="btnCommantSave" style="width: 100%; margin-top: 10px"> 저 장 </button>
 					</div>
 					
 				</div>
@@ -241,6 +243,6 @@
 
 
 	</article>
-
+	<%@include file =".././layout/footer.jsp" %>
 	</body>
 </html>

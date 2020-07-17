@@ -39,13 +39,13 @@ public class BoardController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping(value = "/board", method = RequestMethod.GET) 
-	public String home(Locale locale, Model model,@RequestParam(required=false,defaultValue = "1") int page
+	public String board(Locale locale, Model model,@RequestParam(required=false,defaultValue = "1") int page
 			,@RequestParam(required=false,defaultValue = "1") int range
 			, @RequestParam(required=false,defaultValue = "title") String searchType
 			,@RequestParam(required=false) String keyword
 			,@ModelAttribute("search") Search search) throws Exception{
 		 
-        logger.info("home");
+        logger.info("board");
         
         model.addAttribute("search",search);
 		search.setSearchType(searchType);

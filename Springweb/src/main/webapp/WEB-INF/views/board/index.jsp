@@ -2,6 +2,7 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <% request.setCharacterEncoding("UTF-8"); %>
+<%@include file =".././layout/header.jsp" %>
 <!DOCTYPE html>
 
 <html>
@@ -21,7 +22,7 @@
 	<div class="main_t">
 		<p class="test"><span>함께 공유해요!</span></p>	
 	
-		<button id="writeboard" type="button" class="btn btn-danger">글쓰기</button>
+		<button id="writeboard" type="button" class="btn btn-sm btn-outline-secondary">글쓰기</button>
 	</div>
 	<article>
 	<div class="container">
@@ -165,11 +166,11 @@
 			</div>
 			<!-- search{e} -->
 			<div> 	
-			<img src="${pageContext.request.contextPath}/resources/image/search.png?ver=1" alt="btnImages" class="btnImages"
-			name="btnSearch" id="btnSearch" style="width:10%; height:20%">
+			<svg xmlns="http://www.w3.org/2000/svg" name="btnSearch" id="btnSearch" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24" focusable="false"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><path d="M21 21l-5.2-5.2"></path></svg>
 			</div>
 		</div>
 	</article>
+	<%@include file =".././layout/footer.jsp" %>
 </body>
 
 </html>
