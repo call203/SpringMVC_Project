@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<%@include file=".././board/common_resource.jsp"%>
+		<%@include file=".././common_resource.jsp"%>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/boardContent.js?ver=1)"></script>
 		<link href="${pageContext.request.contextPath}/resources/css/layout.css?ver=1" rel="stylesheet" />
 		<!-- Bootstrap CSS -->
@@ -12,9 +12,9 @@
 		<title>Insert title here</title>
 	</head>
 	<footer class="blog-footer">
-  		<p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@Soyean Lee</a>.</p>
-  		<p>
-   		 <a href="#">Back to top</a>
-  		</p>
+	    <p>사랑해 멍냥 | <a href="/story">소개</a></p>
+		<p>email : freeyeon96@naver.com</p>
+  		<p>Copyright @Soyeon Lee.  All rights reserved.</p>
+  		
 	</footer>
 </html>

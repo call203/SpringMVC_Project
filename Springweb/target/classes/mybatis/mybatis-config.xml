@@ -16,6 +16,7 @@
     <typeAliases>
         <typeAlias type="com.myweb.vo.BoardVO" alias="BoardVO" />
          <typeAlias type="com.myweb.vo.CommantVO" alias="CommantVO" />
+         <typeAlias type="com.myweb.vo.UserVO" alias="UserVO" />
     </typeAliases>
  
  

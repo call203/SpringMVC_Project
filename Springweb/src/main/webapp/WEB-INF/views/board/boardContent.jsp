@@ -8,7 +8,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
-		<%@include file="./common_resource.jsp"%>
+		<%@include file=".././common_resource.jsp"%>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/boardContent.js?ver=1)"></script>
 		<link href="${pageContext.request.contextPath}/resources/css/boardContent.css?ver=1" rel="stylesheet" />
 		<!-- Bootstrap CSS -->

@@ -4,28 +4,19 @@
 <% request.setCharacterEncoding("UTF-8"); %>
 <%@include file =".././layout/header.jsp" %>
 <!DOCTYPE html>
-
 <html>
-
 	<head>
 		<meta charset="UTF-8">
-		<title>board</title>
- 		<%@include file=".././common_resource.jsp"%>
+		<title>USERLIST</title>
+		<%@include file=".././common_resource.jsp"%>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/index.js?ver=1"></script>
 		<link href="${pageContext.request.contextPath}/resources/css/index.css?ver=1" rel="stylesheet" />
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
 	</head>
-
 	<body>
-	<div class="main_t">
-		<p class="test"><span>함께 공유해요!</span></p>	
-	
-		<button id="writeboard" type="button" class="btn btn-sm btn-outline-secondary">글쓰기</button>
-	</div>
-	<article>
-	<div class="container">
+		<article>
+		<div class="container">
 			<table class="table table-hover">
 				<colgroup>
 				<col style="width:5%;" />
@@ -37,31 +28,33 @@
 	
 			<thead>
 			<tr>
-				<th>NO</th>
-				<th>글제목</th>
-				<th>작성자</th>
-				<th>조회수</th>
-				<th>작성일</th>
+				<th>USERID</th>
+				<th>NAME</th>
+				<th>PWD</th>
+				<th>EMAIL</th>
+				<th>DRAGE</th>
+				<th>가입일</th>
 			</tr>
 			</thead>
 
 			<tbody>
 				<c:choose>
-					<c:when test="${empty boardList }" >
+					<c:when test="${empty userList }" >
 						<tr><td colspan="5" align="center">데이터가 없습니다.</td></tr>
 					</c:when> 
 
-					<c:when test="${!empty boardList}">
-						<c:forEach var="list" items="${boardList}">
+					<c:when test="${!empty userList}">
+						<c:forEach var="list" items="${userList}">
 							<tr>
-								<td><c:out value="${list.bid}"/></td>	
+								<td><c:out value="${list.uid}"/></td>	
 								<td>
-									<a href="#" onClick="fn_contentView(<c:out value="${list.bid}"/>)">
-										<c:out value="${list.title}"/>					
+									<a href="#" onClick="fn_contentView(<c:out value="${list.name}"/>)">
+										<c:out value="${list.name}"/>					
 									</a>
 								</td>
-								<td><c:out value="${list.reg_id}"/></td>
-								<td><c:out value="${list.view_cnt}"/></td>
+								<td><c:out value="${list.pwd}"/></td>
+								<td><c:out value="${list.email}"/></td>
+								<td><c:out value="${list.grade}"/></td>
 								<td><c:out value="${list.reg_dt}"/></td>
 							</tr>
 						</c:forEach>
@@ -69,7 +62,7 @@
 				</c:choose>
 			</tbody>
 		</table>
-		<!-- pagination{s} -->
+				<!-- pagination{s} -->
 		
 	<script>		
 		function fn_contentView(bid){
@@ -150,7 +143,7 @@
 
 		</ul>
 	</div>
-	<!-- pagination{e} -->
+		<!-- pagination{e} -->
 	<!-- search{s} -->
 		<div class="form-group row justify-content-center">
 			<div class="w100" style="padding-right:10px">
@@ -171,6 +164,5 @@
 		</div>
 	</article>
 	<%@include file =".././layout/footer.jsp" %>
-</body>
-
+	</body>
 </html>
