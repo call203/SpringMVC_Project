@@ -12,9 +12,11 @@
 		<title>Insert title here</title>
 	</head>
 	<footer class="blog-footer">
-	    <p>사랑해 멍냥 | <a href="/story">소개</a></p>
+		<p> @Soyeon Lee Copyright 2020,  All rights reserved.</p>
+	    <p>사랑해 멍냥 | 경기 고양시 향동동 향기로 somewhere</p>
+	    <p>발행인 :이소연 | 편집인:이소연</p>
 		<p>email : freeyeon96@naver.com</p>
-  		<p>Copyright @Soyeon Lee.  All rights reserved.</p>
+  		
   		
 	</footer>
 </html>

@@ -2,6 +2,7 @@ package com.myweb.springweb;
 
 import javax.inject.Inject;
 
+import org.mindrot.jbcrypt.BCrypt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -47,11 +48,22 @@ private static final Logger logger = LoggerFactory.getLogger(UserController.clas
 	}
 	
 	@RequestMapping(value = "/signupForm",method = RequestMethod.GET)
-	public String insertUser(Model model) throws Exception{
+	public String signupForm(Model model) throws Exception{
 		
 		model.addAttribute("userVO", new UserVO());
 		
 		return "user/signupForm";	
+	}
+	
+	@RequestMapping(value = "/signupForm",method = RequestMethod.POST)
+	public String registerPOST(UserVO uservo, RedirectAttributes redirectAttributes) throws Exception{
+		
+		String hashedPw = BCrypt.hashpw(uservo.getPwd(), BCrypt.gensalt());
+		uservo.setPwd(hashedPw);
+		service.insertUser(uservo);
+		redirectAttributes.addFlashAttribute("mag","REGISTERED");
+			
+		return "redirect:/login";	
 	}
 
 }

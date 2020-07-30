@@ -18,6 +18,21 @@ h1, h2, h3, h4, h5, h6 {
   
 }
 
+.d-md-flex{
+  position: relative;
+  left:10%;
+  right:5%;
+  min-height: 1px;
+  
+}
+.d-md-flex .bg-dark{
+  width:40%;
+}
+
+.d-md-flex .bg-light{
+  width:40%;
+}
+
 /*
  * Dummy devices (replace them with your own or something else entirely!)
  */

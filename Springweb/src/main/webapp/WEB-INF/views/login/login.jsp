@@ -23,12 +23,12 @@
   	<div id="formContent">
 
     <!-- Login Form -->
-    <form:form class="form-signin" name="form" id="form" role="form" modelAttribute="userVO" method="post" action=${pageContext.request.contextPath}/home">
+    <form:form class="form-signin" name="form" id="form" role="form" modelAttribute="userVO" method="post" action="${pageContext.request.contextPath}/login">
     	<div>
     		<h2>로그인</h2>
     	</div>	
       	<form:input path="pwd" id="pwd" class="form-control" placeholder="User ID" required="" autofocus="" />
-      	<form:input path="pwd" id="pwd" class="form-control" placeholder="password" required="" autofocus="" />
+      	<!--form:input path="pwd" id="pwd" class="form-control" placeholder="password" required="" autofocus="" />-->
       	<input type="submit" class="fadeIn fourth" value="Log In">
 
 
